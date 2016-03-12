@@ -1,0 +1,18 @@
+1. mvn archetype:generate -DgroupId=jamp.nineth -DartifactId=test-app -DarchetypeGroupId=com.rudolfschmidt -DarchetypeArtifactId=javase7-essentials-archetype
+2.
+3.
+4. 
+mvn javadoc:jar
+mvn javadoc:aggregate
+5. 
+mvn clean install surefire-report:report 
+mvn clean site (for all docs)
+6,7.
+mvn clean compile (findbugs:check)
+mvn findbugs:gui
+8.
+mvn clean install -Denv=prod
+9.
+mvn archetype:generate -DgroupId=jamp.nineth -DartifactId=test-web -DarchetypeGroupId=org.codehaus.mojo.archetypes -DarchetypeArtifactId=webapp-javaee6
+12.
+mvn clean tomcat7:deploy/undeploy
