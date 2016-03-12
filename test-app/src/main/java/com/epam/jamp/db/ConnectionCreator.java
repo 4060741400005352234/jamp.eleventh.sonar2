@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 
 public final class ConnectionCreator {
 
-    public static final String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+    public static final String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
     //public static final String url = "jdbc:oracle:thin:@eprumossd0143:1523:cheetah";
-    public static final String name = "test";
-    public static final String password = "test";
+    public static final String NAME = "test";
+    public static final String PASSWORD = "test";
 
     private static volatile ConnectionCreator instance;
 
@@ -30,7 +30,7 @@ public final class ConnectionCreator {
         Connection connection = null;
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            connection = DriverManager.getConnection(url, name, password);
+            connection = DriverManager.getConnection(URL, NAME, PASSWORD);
         } catch (Exception e) {
             e.printStackTrace();
         }
